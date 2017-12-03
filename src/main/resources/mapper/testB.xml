@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.max.dbconnection.mapper.B.TestBMapper" >
+    <resultMap id="BaseResultMap" type="com.max.dbconnection.entity.Testb" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="value" property="value" jdbcType="VARCHAR" />
+        <!--<result column="user_sex" property="userSex" javaType="com.neo.enums.UserSexEnum"/>-->
+        <!--<result column="nick_name" property="nickName" jdbcType="VARCHAR" />-->
+    </resultMap>
+
+    <!--<sql id="Base_Column_List" >-->
+        <!--id, name, value-->
+    <!--</sql>-->
+
+    <select id="getAll" resultMap="BaseResultMap"  >
+        SELECT
+        *
+        FROM testb
+    </select>
+
+    <!--<select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >-->
+        <!--SELECT-->
+        <!--<include refid="Base_Column_List" />-->
+        <!--FROM users-->
+        <!--WHERE id = #{id}-->
+    <!--</select>-->
+
+</mapper>
