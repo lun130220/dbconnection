@@ -1,6 +1,6 @@
 package com.max.dbconnection.mapper.A;
 
-import com.max.dbconnection.entity.Testa;
+import com.max.dbconnection.entity.A.Testa;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

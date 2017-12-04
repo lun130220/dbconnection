@@ -2,6 +2,7 @@ package com.max.dbconnection.controller;
 
 import com.max.dbconnection.service.JdbcService;
 import com.max.dbconnection.service.JdbcTempleService;
+import com.max.dbconnection.service.JpaService;
 import com.max.dbconnection.service.MybatisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,9 @@ public class JdbcController {
 
     @Autowired
     private MybatisService mybatisService;
+
+    @Autowired
+    private JpaService jpaService;
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -50,6 +54,14 @@ public class JdbcController {
     public List<? extends Object> getAllJdbcMy(@PathVariable(name = "connection")String connection){
         logger.info("Mybatis: "+connection);
         return mybatisService.getAllJdbc(connection);
+
+    }
+
+    @RequestMapping(value = "/getAllJpa/{connection}",
+            method = RequestMethod.GET, produces = "application/json")
+    public List<? extends Object> getAllJpa(@PathVariable(name = "connection")String connection){
+        logger.info("Jpa: "+connection);
+        return jpaService.getAlljpa(connection);
 
     }
 

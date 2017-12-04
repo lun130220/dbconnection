@@ -1,11 +1,19 @@
-package com.max.dbconnection.entity;
+package com.max.dbconnection.entity.A;
 
-public class Testb {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+//@Table(schema = "testa")
+public class Testa{
+    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column
     private String name ;
-
+    @Column
     private String value;
 
     public long getId() {

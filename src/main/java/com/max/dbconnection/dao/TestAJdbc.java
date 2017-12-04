@@ -1,6 +1,6 @@
 package com.max.dbconnection.dao;
 
-import com.max.dbconnection.entity.Testa;
+import com.max.dbconnection.entity.A.Testa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
