@@ -22,3 +22,17 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/.idea/
+/.mvn/
+dbconnection.git/branches/
+dbconnection.git/objects/
+dbconnection.git/refs/
+src/main/docker/
+src/main/resources/static/
+/mvnw.cmd
+/.gitignore
+/dbconnection.iml
+/mvnw
+/target/
+!/src/main/docker/
+!/src/main/docker/Dockerfile
